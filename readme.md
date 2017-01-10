@@ -104,6 +104,87 @@ Javascript uses Dynamic typing -> Javascript determines the type of variables on
 
 
 Primitive Types:
+A type of data that represents a single value, anything that isn't an object
+
+undefined
+Null
+Boolean
+Floating point Number
+String
+Symbol   ES6 only
+
+
+infix notation:
+function sits in the middle of the paramerters eg: 3 + 4
+
+
+Operator Precedence and Associativity:
+what order is invoked first eg: multiplication over addition
+Associativity determines order when operators have the same precedence
+
+
+Coercion:
+converting a value from one type to another
+
+comparison operators:
+3 < 2 < 1  becomes false < 1  becomes 0 < 1   so this is true
+
+equality ==  attempts to coerce values if neccesary
+strict inequality ===  Does not try to coerce values! Extremely useful
+
+
+Existence:
+if (a) {
+	// will run if a is defined and can be coerced to a true boolean
+}
+
+
+Default Values:
+function greet(name) {
+	name = name || '<defualt value>'
+	console.log("Hello " + name);
+}
+
+greet();
+
+
+
+Objects and functions:
+Objects can have primitives, objects or methods(functions) included in them
+
+Object Literals:
+Objects literals can be created just by setting var objLit = {};
+
+
+JSON library;
+var objectLiteral = {
+	firstname: 'Greg',
+	lastname: 'miller'
+}
+
+JSON.stringify(objectLiteral)  -> '{"firstname": "Greg", "lastName": "miller"'}'
+
+var jsonValue = JSON.parse('{"firstname": "Greg", "lastName": "miller"'})
+
+
+First class functions:
+Everything you can do with other types you can do with functions
+
+functions can be unnamed and anonymous
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
