@@ -84,6 +84,35 @@ function a() {
 var myVar = 1;
 a();
 
+/////////
+
+
+Scope: 
+Where a variabel is availabe in code
+
+ES6 allows let:
+lets are within a block, only accessible in execution context
+
+
+Asynchronous Callbacks:
+
+Asnychronous callbacks happen only when all sycnchronous exectution contexts finish
+
+
+Types:
+Javascript uses Dynamic typing -> Javascript determines the type of variables on the fly, without needing to be specified.
+
+
+Primitive Types:
+
+
+
+
+
+
+
+
+
 
 
 
