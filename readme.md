@@ -174,6 +174,37 @@ functions can be unnamed and anonymous
 
 
 
+Passing by value and by reference:
+primitive values are passed by value (a new copy is created)
+Objects are passed by reference
+equals operator sets up new memory space if used to create new value
+
+
+
+this:
+calls global this 
+
+
+arrays:
+can hold mulitple types, index at 0. duh
+
+Arguments:
+The paramets you pass to a function. in javascript you don't need to pass in all arguments
+
+Automatic semicolon insertion:
+in javascript semicolons are optional, so the syntax parser will add semicolons where it beleives they are missing. Just add your own semicolons to avoid this nasty issue
+
+Imediately invoked function expressions (IIFE):
+functions that are immediately run 
+
+Closures:
+Javascript gives access to memory of variables that have previously finished execution stacks.
+
+
+
+
+
+
 
 
 
