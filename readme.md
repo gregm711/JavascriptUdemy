@@ -200,6 +200,13 @@ functions that are immediately run
 Closures:
 Javascript gives access to memory of variables that have previously finished execution stacks.
 
+Callbacks:
+function that is given to another function to be run when the other function is finished
+
+
+call apply and bind:
+
+
 
 
 
