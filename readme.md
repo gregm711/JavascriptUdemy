@@ -205,6 +205,29 @@ function that is given to another function to be run when the other function is 
 
 
 call apply and bind:
+see app.js
+
+
+
+functional Programming:
+
+see app and underscore.js
+
+
+Object-Oriented & prototypal inheritence:
+
+Inheritance:
+One Object gets acces to the properties and methods of another object
+
+
+Prototypal Inheritance:
+
+objects have prototypes that allow it to access properties that are not directly part of the objects, but are on the object prototype
+Javascript engine will do the work looking up the prototype chain to find where the property exists.
+
+
+
+
 
 
 

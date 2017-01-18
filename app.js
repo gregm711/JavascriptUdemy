@@ -318,9 +318,9 @@ var logPersonName = logName.bind(person);
 logName();
 
 
-//call invokes the function and can specify the this variable
+//call executes the function and can specify the this variable
 
-ar person {
+var person {
 	firstname: 'Greg'
 
 	getFullName: function () {
@@ -335,7 +335,108 @@ var logName = function(lang1, lang2) {
 
 var logPersonName = logName;
 
-logName.call(person);
+logName.call(person, 'en');
+
+
+
+//apply is exactly the same as call but passes arguments as an array
+
+var person {
+	firstname: 'Greg'
+
+	getFullName: function () {
+		return 'asdasd'
+	}
+}
+
+
+var logName = function(lang1, lang2) {
+	console.log('Logged ' + this.getFullName());
+}
+
+var logPersonName = logName;
+
+logName.apply(person, ['en']);
+
+// function borrowing -> calling functions on other objects using apply
+
+var person2 = {
+	firstname: 'Greg',
+	lastname: 'Miller'
+}
+
+person.getFullName.apply(person2);
+
+
+//function currying used create a copy of a funciton with some default values
+
+function multiply(a, b) {
+	return a*b;
+}
+
+var mulitiplyByTwo = multiply.bind(this, 2);
+
+
+console.log(mulitiplyByTwo(5))  -> 10
+
+
+// functional programming example
+
+var arr1  =[1,2,3];
+var arr2 = [];
+for (var i=0; i< arr1.length; i++) {
+	arr2.push(arr1[i] * 2)
+}
+
+// in functional programming terms
+
+function mapForEach(arr, fn) {
+	var newArr = [];
+	for (var i=0; i <arr.length; i++) {
+		newArr.push(
+			fn(arr[i])
+			)
+	}
+}
+
+var arr2 = mapForEach(arr1, function(item) {
+	return item * 2
+})
+
+var checkPastLimit = mapForEach(function(limiter, item) {
+	return item > limiter;
+})
+
+var arr4 = mapForEach(arr1, checkPastLimit.bind(this, 1));
+
+
+
+// Prototypes
+
+var person = {
+	firstname: 'Default',
+	lastname: 'default',
+	getFullName: function() {
+		return this.firstname + ' ' + this.lastname;
+	}
+}
+var john = {
+	firstname: 'Greg',
+	lastname: 'Miller'
+}
+
+//  ONLY FOR DEMO PURPOSE - this is not how you would create a prototype
+
+john.__proto__ = person;   // john now inherits from person
+console.log(john.getFullName)
+
+var jane = {
+	firstname: 'Jane'
+}
+
+jane.__proto__  = person;
+console.log(jane.getFullName) // Jane Default
+
 
 
 
